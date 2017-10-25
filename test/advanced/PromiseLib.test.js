@@ -49,7 +49,6 @@ describe('PromiseLib', function() {
 
     it('should return a promise that resolves to an array of values', function(done) {
       var arrayOfPromises = ['a', 'b', 'c'].map(delay);
-
       PromiseLib.all(arrayOfPromises)
         .then(function(values) {
           expect(values).to.be.an.instanceOf(Array);
