@@ -13,7 +13,7 @@ var getGitHubProfile = function(user, callback) {
   var options = {
     url: 'https://api.github.com/users/' + user,
     headers: { 'User-Agent': 'request' },
-    json: true  // will JSON.parse(body) for us
+    json: true // will JSON.parse(body) for us
   };
 
   request.get(options, function(err, res, body) {
@@ -28,8 +28,8 @@ var getGitHubProfile = function(user, callback) {
 };
 
 var getGitHubProfileAsync = (user) => {
-  const promise = Promise.promisify(getGitHubProfile)
-  return promise(user)
+  const promise = Promise.promisify(getGitHubProfile);
+  return promise(user);
 };
 
 
@@ -42,8 +42,8 @@ var generateRandomToken = function(callback) {
 };
 
 var generateRandomTokenAsync = () => {
-  const promise = Promise.promisify(generateRandomToken)
-  return promise()
+  const promise = Promise.promisify(generateRandomToken);
+  return promise();
 };
 
 
@@ -62,8 +62,8 @@ var readFileAndMakeItFunny = function(filePath, callback) {
 };
 
 var readFileAndMakeItFunnyAsync = (filePath) => {
-  const promise = Promise.promisify(readFileAndMakeItFunny)
-  return promise(filePath)
+  const promise = Promise.promisify(readFileAndMakeItFunny);
+  return promise(filePath);
 
 }; // TODO
 
